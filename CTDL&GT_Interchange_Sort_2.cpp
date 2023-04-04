@@ -1,4 +1,4 @@
-//sap xep mot mang duoc nhap tu bang phim
+//sap xep mot mang duoc nhap tu bang phim thro phuong phap doi cho truc tiep
 #include <stdio.h>
 
 void nhap(int a[],int n){
