@@ -1,4 +1,4 @@
-//sap xep mot mang duoc nhap tu bang phim
+//cai dat thuat toan sap xep chon truc tiep
 #include<stdio.h>
 void Selection_sort(int a[], int n){
 	int min_index;
