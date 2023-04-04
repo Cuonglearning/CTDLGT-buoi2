@@ -1,32 +1,25 @@
-// Tim kiem 12 trong mang :{3, 5, 6, 8, 12, 34, 56, 78, 99}  / nguon:https://blog.luyencode.net/thuat-toan-tim-kiem-nhi-phan
-#include <stdio.h>
-
-int binarySearch(int arr[], int l, int r, int x) {
-  if (r >= l) {
-    int mid = l + (r - l) / 2; 
- 
-    if (arr[mid] == x)
-      return mid;
- 
-    if (arr[mid] > x)
-      return binarySearch(arr, l, mid - 1, x);
- 
-    return binarySearch(arr, mid + 1, r, x);
-  }
- 
-  return -1;
+//cai dat tim kiem tuyen tinh /nguon:https://dnmtechs.com/thuat-toan-tim-kiem-tuyen-tinh-tim-kiem-tuan-tu/
+#include <stdio.h> 
+  
+int search(int arr[], int n, int x) 
+{ 
+    int i; 
+    for (i = 0; i < n; i++) 
+        if (arr[i] == x) 
+            return i; 
+    return -1; 
+} 
+  
+int main(void) 
+{ 
+    int arr[] = { 2, 3, 4, 10, 40 }; 
+    int x = 10; 
+    int n = sizeof(arr) ; 
+    int result = search(arr, n, x); 
+    if(result == -1){
+		printf("So khong co trong mang");
+		}else{
+        printf("%d o vi tri thu %d trong mang",x, result); 
+        }
+    return 0; 
 }
- 
-int main(void) {
-  int arr[] = {3, 5, 6, 8, 12, 34, 56, 78, 99};
-  int n = sizeof(arr) / sizeof(arr[0]);
-  int x = 12;
-  int result = binarySearch(arr, 0, n - 1, x);
-  if (result == -1)
-    printf("%d khong co trong mang",x);
-  else
-    printf("%d xuat hien tai chi so %d", x, result);
-  return 0;
-}
-
-
